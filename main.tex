@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{transparent}  % 控制透明度
+\usepackage{xcolor}       % 支持颜色和透明设置
+\setmainfont{Times New Roman}
+\pagenumbering{gobble}
+
+% 添加居中的透明水印
+% \AddToShipoutPictureBG*{%
+%   \put(\LenToUnit{0.5\paperwidth - 0.1\paperwidth},\LenToUnit{0.5\paperheight - 0.1\paperwidth}){%
+%     \transparent{0.07}  % 设置透明度（0 完全透明，1 不透明）
+%     \includegraphics[width=0.2\paperwidth]{watermark.png}%
+%   }%
+% }
+
+\begin{document}
+
+% Header with logo and university info
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[width=\linewidth]{swjtu.jpeg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+    \raggedleft
+    \textbf{School of Computer and Artificial Intelligence,} \\
+    \textbf{Southwest Jiaotong University} \\
+    NO.999 Xian Rd Pidu District \\
+    Chengdu 611756, China \\
+    \textbf{Tel/Fax:} +86 028-66366165 \\
+    \textbf{URL:} \href{https://www.swjtu.edu.cn}{https://www.swjtu.edu.cn}
+\end{minipage}
+
+\vspace{1em}
+
+Dear Application Committee,
+
+\bigskip
+
+My name is [SUPERVISOR NAME], [POSITION] of the [SCHOOL/INSTITUTION NAME] at [UNIVERSITY NAME], [COUNTRY]. At the request of my master student [APPLICANT NAME], I am glad to write this letter furnishing my evaluation of his academic aptitude and personality. I met [APPLICANT NAME] in [YEAR] and have been his master supervisor since then. After all these years, I believe I have gotten to know him both in terms of scientific potential and personal qualities.
+
+\bigskip
+
+[APPLICANT NAME] joined my lab in [YEAR] as a master's student in [FIELD]. Under my guidance, he became involved in a project supported by the National Natural Science Foundation of [COUNTRY] (No. [PROJECT NUMBER]), where I assigned him the responsibility of researching a subtopic focused on [RESEARCH TOPIC]. During his research, [APPLICANT NAME] faced several significant challenges, such as redesigning research methodologies to improve accuracy and conducting real-world experiments to collect [DATA TYPE]. Through overcoming these difficulties, he gained extensive hands-on experience with [RESEARCH TOOL/TECHNOLOGY] and developed a deep understanding of [RESEARCH TECHNIQUE]. I believe [APPLICANT NAME]’s research experiences have equipped him with the skills and knowledge necessary to excel in research tasks at the PhD level.
+
+\bigskip
+
+To date, [APPLICANT NAME] has published several academic articles in the field of [RESEARCH AREA] during his master's program, including [NUMBER] conference articles ([CONFERENCE NAME]) as first author and [NUMBER] journal paper(s) under review ([JOURNAL NAME]). Moreover, he participated in several international academic conferences and had extensive exchanges with domestic and foreign researchers to further improve his academic level.
+
+\bigskip
+
+Apart from his academic potential, [APPLICANT NAME] proves to be a caring, conscientious, cooperative, and trustworthy member of our research group. He generously shared his insights and skills with regard to topic selection, experimental design, data analysis, and interpretation of results. His teamwork and willingness to help have earned our respect and appreciation.
+
+\bigskip
+
+In summary, [APPLICANT NAME] is an exceptional student with outstanding academic skills, a passion for research, and remarkable perseverance. His ability to tackle complex challenges with creativity and determination sets him apart, and I am confident he will excel in your PhD program. I wholeheartedly recommend him and believe he will make significant contributions to your research community. Please feel free to contact me for further details.
+
+\bigskip
+
+Sincerely,
+
+\vspace{3em}
+
+XX X \\
+Associate Professor \\
+School of XXX, \\
+Southwest Jiaotong University \\
+\texttt{XX@swjtu.edu.cn}
+
+\end{document}
