@@ -9,32 +9,41 @@
 \usepackage{fontspec}
 \usepackage{transparent}  % 控制透明度
 \usepackage{xcolor}       % 支持颜色和透明设置
+\usepackage{tikz}
+
+\definecolor{SWJTUblue}{RGB}{0,118,184}
 \setmainfont{Times New Roman}
 \pagenumbering{gobble}
 
-% 添加居中的透明水印
-% \AddToShipoutPictureBG*{%
-%   \put(\LenToUnit{0.5\paperwidth - 0.1\paperwidth},\LenToUnit{0.5\paperheight - 0.1\paperwidth}){%
-%     \transparent{0.07}  % 设置透明度（0 完全透明，1 不透明）
-%     \includegraphics[width=0.2\paperwidth]{watermark.png}%
-%   }%
-% }
+\newcommand{\watermark}{
+  \AddToShipoutPictureBG{
+    \parbox[b][\paperheight]{\paperwidth}{
+      \vfill
+      \centering
+      \begin{tikzpicture}
+        \node[opacity=0.07] at (current page.center)
+          {\includegraphics[width=0.55\textwidth]{watermark.png}};
+      \end{tikzpicture}
+      \vfill
+    }
+  }
+}
 
 \begin{document}
-
+\watermark
 % Header with logo and university info
 \begin{minipage}{0.5\textwidth}
-    \includegraphics[width=\linewidth]{swjtu.jpeg}
+    \includegraphics[width=\linewidth]{swjtu.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\textwidth}
-    \raggedleft
-    \textbf{School of Computer and Artificial Intelligence,} \\
-    \textbf{Southwest Jiaotong University} \\
+    \raggedright
+    \textcolor{SWJTUblue}{\textbf{School of XXX,}} \\
+    \textcolor{SWJTUblue}{\textbf{Southwest Jiaotong University}} \\
     NO.999 Xian Rd Pidu District \\
     Chengdu 611756, China \\
-    \textbf{Tel/Fax:} +86 028-66366165 \\
-    \textbf{URL:} \href{https://www.swjtu.edu.cn}{https://www.swjtu.edu.cn}
+    \textcolor{SWJTUblue}{\textbf{Tel/Fax:}} +86 028-66366165 \\
+    \textcolor{SWJTUblue}{\textbf{URL:}} \href{https://www.swjtu.edu.cn}{https://www.swjtu.edu.cn}
 \end{minipage}
 
 \vspace{1em}
@@ -65,7 +74,7 @@ In summary, [APPLICANT NAME] is an exceptional student with outstanding academic
 
 Sincerely,
 
-\vspace{3em}
+\vspace{2em}
 
 XX X \\
 Associate Professor \\

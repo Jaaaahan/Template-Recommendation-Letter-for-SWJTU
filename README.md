@@ -1,3 +1,3 @@
 # Template Recommendation Letter for SWJTU
 ## 🖋️ Preview
-![Preview](assets/letter_preview.png)
+<iframe src="main.pdf" width="100%" height="600px"></iframe>
